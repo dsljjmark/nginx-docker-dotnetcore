@@ -1,10 +1,8 @@
-version: '3'
+version: "3.7"
 services:
-  web:
-    build: 
-	    context: .
-	    dockerfile: webmvc.Dockerfile
-    ports:
-      - "80:80"
-	  restart: always
-
+  webapp:
+    build:
+      context: .
+      dockerfile: webmvc.Dockerfile
+      args:
+        buildno: 1
