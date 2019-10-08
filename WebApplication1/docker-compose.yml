@@ -8,3 +8,8 @@ services:
         buildno: 1
     ports:
       - "80:80"
+
+    environment:
+      VIRTUAL_HOST:pre.test.web.claimdi360.tk
+	  LETSENCRYPT_HOST:pre.test.web.claimdi360.tk
+	  LETSENCRYPT_EMAIL:panupong@anywheretogo.com
