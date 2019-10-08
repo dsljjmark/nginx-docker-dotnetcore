@@ -3,12 +3,8 @@ services:
   web:
     build: 
 	context: .
-	dockerfile: Dockerfile-alpine
+	dockerfile: webmvc.Dockerfile
     ports:
-      - "5000:5000"
-    volumes:
-      - .:/code
-    environment:
-      VIRTUAL_HOST:dev.web.claimdi360.tk
-	  LETSENCRYPT_HOST:dev.web.claimdi360.tk
-	  LETSENCRYPT_EMAIL:panupong@anywheretogo.com
+      - "80:80"
+	restart: always
+

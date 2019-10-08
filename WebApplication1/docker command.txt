@@ -16,3 +16,8 @@ docker run -d -p 80:80 -p 443:443 \
     -v $HOME/certs:/etc/nginx/certs:rw \
     -v /var/run/docker.sock:/var/run/docker.sock:ro \
     jrcs/letsencrypt-nginx-proxy-companion
+
+	    environment:
+      VIRTUAL_HOST:dev.web.claimdi360.tk
+	  LETSENCRYPT_HOST:dev.web.claimdi360.tk
+	  LETSENCRYPT_EMAIL:panupong@anywheretogo.com
