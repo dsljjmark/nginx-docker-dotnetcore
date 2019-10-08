@@ -6,6 +6,8 @@ services:
       dockerfile: webmvc.Dockerfile
       args:
         buildno: 1
+    expose:
+      - "5000"
     environment:
       - VIRTUAL_HOST:pre.test.web.claimdi360.tk
       - LETSENCRYPT_HOST:pre.test.web.claimdi360.tk
