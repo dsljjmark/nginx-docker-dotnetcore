@@ -6,9 +6,17 @@ services:
       dockerfile: webmvc.Dockerfile
       args:
         buildno: 1
-    expose:
-      - "5000"
+    networks:
+      - reverse-proxy
+      - back
     environment:
+      - VIRTUAL_PORT=1234
       - VIRTUAL_HOST=pre.test.web.claimdi360.tk
       - LETSENCRYPT_HOST=pre.test.web.claimdi360.tk
       - LETSENCRYPT_EMAIL=panupong@anywheretogo.com
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
+  back:
+    driver: bridge
