@@ -6,3 +6,5 @@ services:
       dockerfile: webmvc.Dockerfile
       args:
         buildno: 1
+    ports:
+      - "80:80"
