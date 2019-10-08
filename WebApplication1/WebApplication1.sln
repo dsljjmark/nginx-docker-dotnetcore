@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item", "Item", "{7803C9B0-A
 	ProjectSection(SolutionItems) = preProject
 		docker command.txt = docker command.txt
 		docker-compose = docker-compose
+		webmvc.Dockerfile = webmvc.Dockerfile
 	EndProjectSection
 EndProject
 Global
