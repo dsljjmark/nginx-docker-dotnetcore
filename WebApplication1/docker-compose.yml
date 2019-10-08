@@ -6,5 +6,5 @@ services:
 	    dockerfile: webmvc.Dockerfile
     ports:
       - "80:80"
-	restart: always
+	  restart: always
 
