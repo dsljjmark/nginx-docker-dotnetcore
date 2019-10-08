@@ -2,8 +2,8 @@ version: '3'
 services:
   web:
     build: 
-	context: .
-	dockerfile: webmvc.Dockerfile
+	    context: .
+	    dockerfile: webmvc.Dockerfile
     ports:
       - "80:80"
 	restart: always
