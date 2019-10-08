@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: 
+	context: .
+	dockerfile: Dockerfile-alpine
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    environment:
+      VIRTUAL_HOST:dev.web.claimdi360.tk
+	  LETSENCRYPT_HOST:dev.web.claimdi360.tk
+	  LETSENCRYPT_EMAIL:panupong@anywheretogo.com
