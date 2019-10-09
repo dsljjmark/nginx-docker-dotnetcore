@@ -13,6 +13,7 @@ services:
       - 80
     restart: always
     environment:
+      - ASPNETCORE_ENVIRONMENT=development
       - VIRTUAL_PORT=1234
       - VIRTUAL_HOST=pre.test.web.claimdi360.tk
       - LETSENCRYPT_HOST=pre.test.web.claimdi360.tk

@@ -1,7 +1,11 @@
 ﻿@{
+    @using Microsoft.Extensions.Configuration
+    @inject IConfiguration Configuration
     ViewData["Title"] = "Home Page";
     var currentTime = DateTime.Now;
     var name = TimeZone.CurrentTimeZone.StandardName;
+
+    var env = Configuration["name"];
 }
 
     <div class="text-center">
@@ -11,6 +15,9 @@
         </h2>
         <h2>
             @name
+        </h2>
+        <h2>
+            @env
         </h2>
         <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     </div>
