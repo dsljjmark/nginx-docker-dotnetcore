@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  webappDevelopment:
+  webappdevelopment:
     build:
       context: .
       dockerfile: webmvc.Dockerfile
@@ -18,7 +18,7 @@ services:
       - VIRTUAL_HOST=pre.test.web.claimdi360.tk
       - LETSENCRYPT_HOST=pre.test.web.claimdi360.tk
       - LETSENCRYPT_EMAIL=panupong@anywheretogo.com
-  webappProduction:
+  webappproduction:
     build:
       context: .
       dockerfile: webmvc.Dockerfile
