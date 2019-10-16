@@ -36,6 +36,24 @@ services:
       - VIRTUAL_HOST=pre.test.api.claimdi360.tk
       - LETSENCRYPT_HOST=pre.test.api.claimdi360.tk
       - LETSENCRYPT_EMAIL=panupong@anywheretogo.com
+  webappstaging:
+    build:
+      context: .
+      dockerfile: webmvc.Dockerfile
+      args:
+        buildno: 1
+    networks:
+      - reverse-proxy
+      - back
+    expose:
+      - 80
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - VIRTUAL_PORT=1235
+      - VIRTUAL_HOST=pre.test.auth.claimdi360.tk
+      - LETSENCRYPT_HOST=pre.test.auth.claimdi360.tk
+      - LETSENCRYPT_EMAIL=panupong@anywheretogo.com
 
 
 networks:
