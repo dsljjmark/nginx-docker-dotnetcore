@@ -50,7 +50,7 @@ services:
     restart: always
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
-      - VIRTUAL_PORT=1235
+      - VIRTUAL_PORT=1239
       - VIRTUAL_HOST=pre.test.auth.claimdi360.tk
       - LETSENCRYPT_HOST=pre.test.auth.claimdi360.tk
       - LETSENCRYPT_EMAIL=panupong@anywheretogo.com
